@@ -1,0 +1,90 @@
+:root {
+  --checkout-progressbar-active-color: var(--primary-base-color);
+  --checkout-progressbar-color: #d8d8d8; // didnt find a variable for it in the :root
+  --checkout-progressbar-background-color: var(--secondary-base-color);
+  --checkout-progressbar-title-color: var(--secondary-dark-color);
+  --checkout-progressbar-active-title-color: var(--body-content-color);
+  --checkout-progressbar-active-cricle-color: var(--secondary-light-color);
+}
+.Checkout-ProgressBar {
+  font-weight: bold;
+  height: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  background: var(--checkout-progressbar-background-color);
+  padding-bottom: var(
+    --breadcrumbs-height
+  ); // didnt want to remove the ::before from Checkout div so i added this
+  box-sizing: content-box;
+  span.bar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    &::before {
+      content: "";
+      width: 100%;
+      height: 5px;
+      background-color: var(--checkout-progressbar-color);
+      position: absolute;
+      left: 0;
+      top: 40%;
+    }
+    &::after {
+      content: "";
+      width: 0;
+      height: 5px;
+      transition: all 0.5s ease;
+      background-color: var(--checkout-progressbar-active-color);
+      position: absolute;
+      left: 0;
+      top: 40%;
+      z-index: 1;
+    }
+    span {
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      width: fit-content;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--checkout-progressbar-background-color);
+      color: var(--checkout-progressbar-title-color);
+      transition: all 0.5s ease 0.5s;
+      .circle {
+        font-size: 14px;
+        // border: solid var(--checkout-progressbar-background-color);
+        // border-width: 0px 10px 0px 10px;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        background-color: var(--checkout-progressbar-color);
+        margin-bottom: 5px;
+        box-sizing: content-box;
+        color: var(--checkout-progressbar-title-color);
+      }
+    }
+    &.active {
+      &::after {
+        width: 100%;
+      }
+      span {
+        color: var(--checkout-progressbar-active-title-color);
+        .circle {
+          background-color: var(--checkout-progressbar-active-color);
+          color: var(--checkout-progressbar-active-cricle-color);
+        }
+      }
+    }
+    .check-mark::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      width: 12px;
+      top: -6px;
+      height: 6px;
+      transform: rotate(135deg);
+      border-right: 2px solid var(--checkout-progressbar-active-cricle-color);
+      border-top: 2px solid var(--checkout-progressbar-active-cricle-color);
+    }
+  }
+}
