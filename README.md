@@ -1,4 +1,4 @@
-https://t.me/proxy?server=142.132.185.118&port=443&ref_secret-share=@mtprotoproxies&secret=ee008c3f6a9321de531462b058247cfd18676174657761792e696e7374616772616d1e636f6d
+https://t.me/proxy?server=www.neumob.business&port=443&secret=dd00000000000000000000000000000000
 
 
 # Getting Started with Create ScandiPWA App
