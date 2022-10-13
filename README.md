@@ -1,1 +1,2 @@
-https://t.me/proxy?server=103.105.50.185&port=8076&secret=7sgP9gT6RUCPHRUmJNO//PJteXdlYi5kdW9saW5nby5jb20
+##### 21 mehr
+https://t.me/proxy?server=46.246.10.254&port=443&secret=7rxHX90eh%2BahBfmWf%2BnUBlFwZXl2YW5kaGEuaXI
